@@ -1,0 +1,103 @@
+
+/*Responsive Navbar*/
+
+@media(max-width: 920px){
+	.navbar .navbar-nav ul > li{
+		margin:0 15px;
+	}
+}
+
+@media(max-width: 920px){
+	.navbar{
+		padding:15px;
+	}
+	.navbar .navbar-nav-toggle{
+		display: flex;
+	}
+  .navbar .navbar-nav{
+  	max-height: 0;
+  	flex-basis: 100%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	transition: all 0.5s ease;
+  }
+
+  .navbar .navbar-nav ul{
+  	background-color: #222222;
+  	margin-top:12px;
+  }
+  .navbar .navbar-nav ul > li{
+  	display: block;
+  	margin:0;
+  }
+  .navbar .navbar-nav ul > li > a::before{
+     content: none;
+  }
+  .navbar .navbar-nav ul > li > a {
+    padding: 12px 15px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+ }
+ .navbar .navbar-nav ul > li > .sub-menu{
+ 	max-height: 0;
+ 	overflow: hidden;
+ 	position: relative;
+ 	width: 100%;
+ 	box-shadow: none;
+ 	margin:0;
+ 	visibility: visible;
+ 	opacity: 1;
+ 	background-color: transparent;
+ 	border: none;
+ }
+ .navbar .navbar-nav ul > li > .sub-menu > li > a{
+ 	color: #ffffff;
+ 	padding:14px 20px 12px 40px;
+ }
+}
+
+@media (max-width: 920px) {
+
+    .products{
+        display: inherit;
+        height: auto;
+    }
+
+    .product{
+        margin-top: auto;
+    }
+
+    .main_section{
+        padding: 30%;
+    }
+
+    .valores, .autoridades{
+        display: inherit;
+    }
+		.contenedorportada_texto{
+				display: inherit;
+				margin-top: 100px;
+				padding: 10%;
+
+		}
+		.titulo1 , .titulo2 , .titulo3{
+			color: white;
+			font-size: 30px;
+			position: center;
+			text-align: center;
+
+
+		}
+
+		.contenedor_libro{
+				display: flex;
+				flex-wrap: wrap;
+				height: auto;
+
+		}
+
+		.contenedor_autoridad{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+}

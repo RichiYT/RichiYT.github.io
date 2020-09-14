@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+
+}
+*{
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+	/*background-color: red;*/
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.navbar{
+	background-color: #600100;/*color base de la universidad*/
+	padding:0 15px;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+.align-items-center{
+	align-items: center;
+}
+/*
+.logoUNSCH{
+		position: center;
+}
+*/
+/*
+.navbar .logo .brand-name{
+ font-size:50px;
+ color:#ffffff;
+ text-decoration: none;
+ font-family: 'Trade Winds';
+}
+*/
+.navbar .navbar-nav-toggle{
+
+	height:32px;
+	width: 40px;
+	background-color: transparent;
+	border:1px solid #ffffff;
+	border-radius:3px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.navbar .navbar-nav-toggle:focus{
+	outline: none;
+}
+.navbar .navbar-nav-toggle span{
+	height: 2px;
+	width: 16px;
+	display: inline-block;
+	background-color: #ffffff;
+	position: relative;
+	transition: all .3s ease;
+}
+.navbar .navbar-nav-toggle.close span{
+	background-color: transparent;
+}
+.navbar .navbar-nav-toggle span::before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 2px;
+	width: 100%;
+	background-color: #ffffff;
+	transform: translateY(-6px);
+	transition: all .3s ease;
+}
+.navbar .navbar-nav-toggle.close span::before{
+	transform: translateY(0) rotate(45deg);
+}
+.navbar .navbar-nav-toggle span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 2px;
+	width: 100%;
+	background-color: #ffffff;
+	transform: translateY(6px);
+	transition: all .3s ease;
+}
+.navbar .navbar-nav-toggle.close span::after{
+	transform: translateY(0) rotate(-45deg);
+}
+.navbar .navbar-nav ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.navbar .navbar-nav ul > li{
+	display: inline-block;
+	margin:0 25px;
+	position: relative;
+}
+.navbar .navbar-nav ul > li:last-child{
+ margin-right:0;
+}
+.navbar .navbar-nav ul > li > a{
+	padding:28px 0;
+	display: block;
+	color:#ffffff;
+	font-size:16px;
+	text-decoration: none;
+	position: relative;
+	transition: color 0.3s ease;
+}
+.navbar .navbar-nav ul > li > a::before{
+	content:'';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 3px;
+	width:0%;
+	background-color:#ffc226;
+	transition: width 0.3s ease;
+}
+.navbar .navbar-nav ul > li > a:hover::before{
+	width: 100%;
+}
+.navbar .navbar-nav ul > li > a:hover{
+	color:#ffc226;
+}
+
+.navbar .navbar-nav ul > li > .sub-menu{
+	position: absolute;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	width: 220px;
+	top:100%;
+	left:0;
+	border-top:3px solid #ffc226;
+	margin:20px 0 0 0;
+	padding:0;
+	list-style: none;
+	z-index:10;
+	opacity:0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+.navbar .navbar-nav ul > li:hover > .sub-menu{
+    opacity:1;
+	visibility:visible;
+	margin:0;
+}
+.navbar .navbar-nav ul > li > .sub-menu > li{
+	display: block;
+	margin:0;
+}
+.navbar .navbar-nav ul > li > .sub-menu > li > a::before{
+	content: none;
+}
+.navbar .navbar-nav ul > li > .sub-menu > li > a{
+	color:#444;
+	transition: all 0.3s ease;
+	padding:14px 20px;
+	text-decoration: none;
+	margin:0;
+}
+.navbar .navbar-nav ul > li > .sub-menu > li > a:hover{
+	background-color: #ffc226;
+	color:#ffffff;
+}
+
+/*--------Main section-------*/
+/*
+.main_section{
+    background-image: url("../images/portadaUNSCH.jpg");
+    height: 50px;
+    background-size: cover;
+    background-position: center top;
+    padding: 15%;
+    text-align: center;
+    color: #ba9000;/*Color dorado
+}
+*/
+.contenedor_portada{
+		width: 100%;
+		height: 100%;
+}
+.home{
+	height: 100vh;
+	background-image: url('../images/estadistica.jpg');
+	background-size: cover;
+	background-position: center;
+
+
+}
+/*Inicio de Degrado de fondo*/
+.overlay{
+    position: realtive;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(217, 92, 96, 0.6);
+}
+/*Fin de Degrado de fondo*/
+
+/*Inicio de texto de portada*/
+.contenedorportada_texto{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		/*background-color: rgb(217, 92, 96, 0.6);*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 30px;
+}
+
+.titulo1 , .titulo2 , .titulo3{
+		color: white;
+		font-size: 50px;
+		margin: 0 20px;
+		border: 1px solid white;
+		padding: 15px;
+
+}
+
+
+/*Fin de texto de portada*/
+
+/*Modificando el fondo de los contenedores*/
+/*
+.products{
+			/*background-image: url("../images/curve.png");
+		  padding: 15%;
+		  background-position: center top;
+		  background-repeat: no-repeat;
+		  display: flex;
+		  height: 95px;
+		  background-size: cover;
+			display: flex;
+    	padding: 5%
+}
+
+.product{
+/*
+		padding: 20px;
+	  margin-top: -226px;
+
+		padding: 10px;
+}
+h1.titulo_boletin{
+		text-align: center;
+}
+
+.img_product{
+	    text-align: center;
+			width: 100%;
+	}
+
+.texto_boletin{
+	    text-align: justify;
+	}
+
+.content{
+			position: relative;
+			padding: 15px;
+	    background-color: white;/*Color rojo de la universidad
+			width: 400px;
+	    border-radius: 30px;
+	    box-shadow: 0 0 4px #383636;
+}
+*/
+
+
+
+.texto_titulo{
+		text-align: center;
+		font-family: 'Lobster';
+}
+
+/*Inicio de Titulo*/
+h1{
+		height: 20px;
+		font-weight: 100px;
+		color: #600100;/*color base de la universidad*/
+		display: inline-block;
+}
+
+h4{
+		color: #600100;/*color base de la universidad*/
+		display: inline-block;
+		font-family: 'Lobster';
+}
+
+/*fin de Titulo*/
+
+.main_button{
+    padding: 10px;
+    background-color: #600100;/*color base de la universidad*/
+    width: 100%;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+
+}
+
+.main_button:hover{
+    background-color: #b60907;
+}
+/*Inicio de contenedores de libro*/
+.contenedor_libro{
+		position: relative;
+		height: 90vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/*flex-wrap: wrap;*/
+		padding: 30px;
+}
+
+.contenedor_libro .card{
+		position: relative;
+		max-width: 250px;
+		height: 215px;
+		background: #fff;
+		margin: 30px 20px;
+		padding: 20px 15px;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+		transition: 0.3s ease-in-out;
+		border-radius: 5px;
+}
+
+.contenedor_libro .card:hover{
+		height: 440px;
+}
+
+
+.contenedor_libro .card .imgBx{
+	position: relative;
+	width: 200px;
+	height: 260px;
+	top: -60px;
+	left: 30px;
+	z-index: 1;
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor_libro .card .imgBx img{
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+.contenedor_libro .card .contenido_libro{
+	position: relative;
+	margin-top: -140px;
+	padding: 10px 15px;
+	text-align: center;
+	color: #111;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.contenedor_libro .card:hover .contenido_libro{
+	visibility: visible;
+	opacity: 1;
+	margin-top: -80px;
+	transition-delay: 0.3s;
+}
+/*Fin de contenedores de libro*/
+
+/*Inicio de contenedor de valores*/
+/* inicio parrafo libro*/
+.parrafo_libro{
+		margin-top: -10px;
+}
+/* fin parrafo libro*/
+.valores{
+		display: flex;
+		padding: 10%;
+}
+
+.valor{
+    text-align: center;
+    padding: 20px;
+}
+
+.valor img{
+    max-height: 100px;
+
+}
+
+.texto_valor{
+		padding: 10px;
+    text-align: justify;
+}
+
+.contenedor_valor{
+    box-shadow: 0px 0 2px 1px #e6e5e9;
+}
+
+/*Fin de contenedor de valores*/
+
+/*Inicio de contendor de Autoridades*/
+/*
+.autoridades{
+    display: flex;
+    padding: 5%
+}
+
+.autoridad{
+    padding: 10px;
+}
+
+.autoridad img{
+    width: 100%;
+}
+
+h2.autoridad_titulo{
+    text-align: center;
+}
+
+.contenedor_autoridad{
+    box-shadow: 0px 0 2px 1px #e6e5e9;
+}
+
+.autoridad .texto_autoridad{
+    padding: 10px;
+		text-align: justify;
+}
+*/
+/*
+h1{
+    font-size: 70px;
+    color:#000;
+    text-align: center;
+}
+*/
+.contenedor_autoridad{
+    margin: auto;
+    width: 100%;
+}
+
+.card_autoridad{
+    text-align: center;
+    color: #fff;
+}
+h2.todo_autorida{
+    font-size: 30px;
+}
+.texto_autoridad{
+    text-align: justify;
+}
+.imagen_autoridad{
+    border-radius: 50% ;
+		border: 7px solid #fff;
+    width: 50%;
+}
+.card_columna_autoridad{
+    position: relative;
+  	overflow: hidden;
+    margin: 10px;
+    background: #333;
+    padding: 15px;
+}
+.nombre_autoridad{
+    font-size: 15px;
+}
+.profesion_autoridad{
+    color: #03a9f4;
+    font-size: 18px;
+}
+.card_autoridad .contenedor_autoridad{
+  	display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+}
+
+.linea_autoridad {
+  	position: absolute;
+	 	background: linear-gradient(#0575e6,#00F260);
+  	top: 99%;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+
+  transition: 0.8s;
+}
+.card_autoridad .card_columna_autoridad:hover .linea_autoridad {
+  	top: 0px;
+}
+.card_columna_autoridad:hover .profesion_autoridad{
+    color: #fff;
+}
+.todo_autoridad{
+  	position: relative;
+}
+@media(min-width:520px){
+    .card_columna_autoridad{
+        width: 40%;
+    }
+}
+@media(min-width:1024px){
+    .card_columna_autoridad{
+        width: 28%;
+    }
+     .contenedor_autoridad{
+        width: 1024px;
+    }
+}
+@media(min-width:1200px){
+    .contenedor_autoridad{
+        width: 1200px;
+    }
+}
+
+/*Fin de contendor de Autoridades*/
+
+/* ------------------------------------------- Inicio de Footer */
+footer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  background-color: #600100;/*color base de la universidad*/
+  padding: 10px;
+  color: white;
+}
+
+.contact a{
+  color: #ffc226;;
+}
+/* ------------------------------------------- Fin de Footer */
+
+
+/*inicios de dashboard*/
+
+.powerbi_titulo{
+		text-align: center;
+}
+
+.trabajo{
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 140px
+}
